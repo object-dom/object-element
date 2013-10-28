@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <script src="/build/build.js"></script>
+    <script>
+      var ObjectElement = require('object-element');
+      var test = require('simple-test');
+      var dom = require('dom-helper');
+
+      test('objectElement.tie(callback)', function () {
+        var div = dom.insertDiv();
+        var objectDiv = new ObjectElement(div);
+
+        objectDiv.tie(function (el) {
+          test.eq(el, div);
+          test.eq(this, objectDiv);
+        });
+
+        dom.remove(div);
+      });
+      </script>
+  </body>
+</html>

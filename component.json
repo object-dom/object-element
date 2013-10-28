@@ -1,0 +1,21 @@
+{
+  "name": "object-element",
+  "repo": "object-element/object-element",
+  "description": "The base abstraction of object element",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/domify": "*"
+  },
+  "development": {
+    "shallker/simple-test": "*",
+    "shallker/dom-helper": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "lib/events.js",
+    "lib/object-element.js"
+  ]
+}
